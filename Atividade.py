@@ -5,6 +5,11 @@ funcionalidades = {"Ler": True,
 
 def geraCombinacoes(funcionalidades):
     quantidade = len(funcionalidades)
+    total = 2 ** quantidade
+    
+    print(f"Quantidade de combinações: {total}")
+    print("")
+    
     if total <= 9:
         partes = dividirTrabalho(0, total, 2, quantidade)
     else:
@@ -31,3 +36,5 @@ def apresentaCombinacoes(inicio, fim, quantidade):
             combinacao[quantidade - 1 - j] = bit
         
         print(combinacao)
+
+geraCombinacoes(funcionalidades)
