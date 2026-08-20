@@ -5,10 +5,9 @@ funcionalidades = {"Ler": True,
 
 def geraCombinacoes(funcionalidades):
     quantidade = len(funcionalidades)
+    if total <= 9:
+        partes = dividirTrabalho(0, total, 2, quantidade)
+    else:
+        partes = dividirTrabalho(0, total, 4, quantidade)
     
-
-def dividirTrabalho(totalCombinacoes, quantidadeThreds):
-    a
-
-def processarCombinacoes(inicio, fim):
-    a
+    return partes
