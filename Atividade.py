@@ -22,3 +22,12 @@ def dividirTrabalho(inicio, fim, divisao, quantidade):
     dividirTrabalho(inicio, meio, divisao, quantidade)
     dividirTrabalho(meio, fim, divisao, quantidade)
 
+def apresentaCombinacoes(inicio, fim, quantidade):
+    for i in range(inicio, fim):
+        combinacao = [0] * quantidade
+        
+        for j in range(quantidade):
+            bit = (i >> j) & 1
+            combinacao[quantidade - 1 - j] = bit
+        
+        print(combinacao)
